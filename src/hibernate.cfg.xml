@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+  <session-factory>
+    <property name="hibernate.dialect">org.hibernate.dialect.MySQL5InnoDBDialect</property>
+    <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+    <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/pontocristao</property>
+    <property name="hibernate.connection.username">root</property>
+    <property name="hibernate.connection.password">root</property>
+    <property name="hibernate.show_sql">true</property>
+    <property name="hibernate.format_sql">true</property>
+    <property name="hibernate.hbm2ddl.auto">update</property>
+    <mapping class="pontocristao.modelo.Caixa"/>
+    <mapping class="pontocristao.modelo.Cliente"/>
+    <mapping class="pontocristao.modelo.ClientePessoaFisica"/>
+    <mapping class="pontocristao.modelo.ClientePessoaJuridica"/>
+    <mapping class="pontocristao.modelo.CodigoBarrasProprio"/>
+    <mapping class="pontocristao.modelo.ContaPagar"/>
+    <mapping class="pontocristao.modelo.Dependente"/>
+    <mapping class="pontocristao.modelo.Endereco"/>
+    <mapping class="pontocristao.modelo.Filme"/>
+    <mapping class="pontocristao.modelo.Fornecedor"/>
+    <mapping class="pontocristao.modelo.Funcionario"/>
+    <mapping class="pontocristao.modelo.ItemLocacao"/>
+    <mapping class="pontocristao.modelo.ItemVenda"/>
+    <mapping class="pontocristao.modelo.Locacao"/>
+    <mapping class="pontocristao.modelo.MovimentacaoCaixa"/>
+    <mapping class="pontocristao.modelo.MovimentacaoCaixaContaPagar"/>
+    <mapping class="pontocristao.modelo.MovimentacaoCaixaDeposito"/>
+    <mapping class="pontocristao.modelo.MovimentacaoCaixaEntrada"/>
+    <mapping class="pontocristao.modelo.MovimentacaoCaixaLocacao"/>
+    <mapping class="pontocristao.modelo.MovimentacaoCaixaRetirada"/>
+    <mapping class="pontocristao.modelo.MovimentacaoCaixaSaida"/>
+    <mapping class="pontocristao.modelo.MovimentacaoCaixaVenda"/>
+    <mapping class="pontocristao.modelo.Pagamento"/>
+    <mapping class="pontocristao.modelo.PagamentoLocacao"/>
+    <mapping class="pontocristao.modelo.PagamentoVenda"/>
+    <mapping class="pontocristao.modelo.ProdutoBase"/>
+    <mapping class="pontocristao.modelo.Produto"/>
+    <mapping class="pontocristao.modelo.TabelaPrecoLocacao"/>
+    <mapping class="pontocristao.modelo.TipoContaPagar"/>
+    <mapping class="pontocristao.modelo.TipoFilme"/>
+    <mapping class="pontocristao.modelo.TipoPagamento"/>
+    <mapping class="pontocristao.modelo.TipoProduto"/>
+    <mapping class="pontocristao.modelo.Venda"/>
+  </session-factory>
+</hibernate-configuration>
