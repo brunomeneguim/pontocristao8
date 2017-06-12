@@ -66,16 +66,15 @@ public class FrmLocacao extends javax.swing.JDialog {
 
                         BtnPagamento.setEnabled(false);
                         BtnDevolver.setEnabled(false);
-                        
+
                         int linhaSelecionada = jTableLista.getSelectedRow();
                         Locacao locacao = lista.get(linhaSelecionada);
 
                         if (!locacao.getPago()) {
                             BtnPagamento.setEnabled(true);
-                        }  else if(!locacao.getDevolvido()) {
+                        } else if (!locacao.getDevolvido()) {
                             BtnDevolver.setEnabled(true);
                         }
-
                     } else {
                         BtnEditar.setEnabled(false);
                         BtnExcluir.setEnabled(false);
@@ -370,20 +369,18 @@ public class FrmLocacao extends javax.swing.JDialog {
                     locacao.setDevolvido(true);
 
                     Exception erro = controle.DevolverLocacao(locacao.getId());
-                    
+
                     if (erro != null) {
                         throw erro;
                     }
-                    
+
                     modeloTabela.removeRow(linhaSelecionada);
                     modeloTabela.insertRow(linhaSelecionada, RetornarNovaLinha(locacao));
 
                     controle = new ControleLocacao();
-                    
                 } catch (Exception e) {
                     Utilidades.MostrarMensagemErro(e);
                 }
-
             }
         }
     }//GEN-LAST:event_BtnDevolverActionPerformed
