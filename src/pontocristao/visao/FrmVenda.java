@@ -332,6 +332,9 @@ public class FrmVenda extends javax.swing.JDialog {
                 modeloTabela.removeRow(linhaSelecionada);
                 modeloTabela.insertRow(linhaSelecionada, RetornarNovaLinha(venda));
 
+                lista.remove(linhaSelecionada);
+                lista.add(linhaSelecionada, venda);
+
                 controle = new ControleVenda();
             }
         }
