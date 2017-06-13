@@ -352,6 +352,9 @@ public class FrmLocacao extends javax.swing.JDialog {
                 modeloTabela.removeRow(linhaSelecionada);
                 modeloTabela.insertRow(linhaSelecionada, RetornarNovaLinha(locacao));
 
+                lista.remove(linhaSelecionada);
+                lista.add(linhaSelecionada, locacao);
+
                 controle = new ControleLocacao();
             }
         }
@@ -376,6 +379,9 @@ public class FrmLocacao extends javax.swing.JDialog {
 
                     modeloTabela.removeRow(linhaSelecionada);
                     modeloTabela.insertRow(linhaSelecionada, RetornarNovaLinha(locacao));
+
+                    lista.remove(linhaSelecionada);
+                    lista.add(linhaSelecionada, locacao);
 
                     controle = new ControleLocacao();
                 } catch (Exception e) {
